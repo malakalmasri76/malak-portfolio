@@ -18,5 +18,5 @@ Screenshots
 <img width="1583" height="719" alt="Screenshot 2026-01-11 134657" src="https://github.com/user-attachments/assets/e49c0c3e-00e9-4c2b-84b5-b63e1a0d00d3" />
 
 
-
-[View Live]malak-portfolio-ten.vercel.app
+view link:
+https://malak-portfolio-ten.vercel.app/
