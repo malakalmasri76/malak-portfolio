@@ -66,13 +66,27 @@ const FeaturedProjects = () => {
                 <p className="text-gray-400 text-sm leading-relaxed">
                   {project.description}
                 </p>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  className="text-cyan-400"
-                >
-                  View on GitHub →
-                </a>
+               <div className="flex gap-4 mt-4">
+  <a
+    href={project.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-cyan-400 text-sm hover:underline flex items-center gap-1"
+  >
+    GitHub →
+  </a>
+  
+  {project.demo && (
+    <a
+      href={project.demo}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-300 text-sm hover:text-cyan-400 hover:underline flex items-center gap-1"
+    >
+      Live Demo 🌐
+    </a>
+  )}
+</div>
               </div>
             </div>
           ))}
