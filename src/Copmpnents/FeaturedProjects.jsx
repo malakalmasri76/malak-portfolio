@@ -2,35 +2,44 @@ import React from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const FeaturedProjects = () => {
-  const projects = [
+ const projects = [
+    {
+      title: "Smart Sales Catalog",
+      category: "PWA & Serverless Solution",
+      description:
+        "A high-performance offline-first web application for sales reps. Integrated with Google Sheets as a real-time CMS for instant updates.",
+      image: "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=800",
+      github: "https://github.com/malakalmasri76/Product-page",
+      demo: "https://product-page-rouge.vercel.app/", // رابط المعاينة
+    },
     {
       title: "Trippy App",
       category: "React.js Web Application",
       description:
         "A responsive travel planning web application built with React. Features interactive UI components and dynamic data rendering.",
-      image:
-        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
+      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
       github: "https://github.com/malakalmasri76/Trippy-App",
+      demo: "https://trippy-app-malak.vercel.app/", // تأكدي من الروابط الصحيحة
     },
     {
       title: "Melody Shop",
       category: "React.js E-commerce UI",
       description:
         "A modern e-commerce shop interface developed using React. Showcases component-based architecture and interactive UI design.",
-      image:
-        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800",
+      image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800",
       github: "https://github.com/malakalmasri76/Melody-shop",
+      demo: "https://melody-shop-demo.vercel.app/", 
     },
     {
       title: "Weather App",
-    category: "React.js Weather Application",
-    description:
-      "A weather forecast application built with React that fetches real-time weather data and displays current conditions in a clean, user-friendly interface.",
-    image: "https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?w=800",
-    github: "https://github.com/malakalmasri76/Weather-App"
+      category: "React.js Weather Application",
+      description:
+        "A weather forecast application built with React that fetches real-time weather data with a clean interface.",
+      image: "https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?w=800",
+      github: "https://github.com/malakalmasri76/Weather-App",
+      demo: "https://weather-app-malak.vercel.app/",
     },
   ];
-
   return (
     <section id="projects" className="py-20 px-6 bg-black">
       <div className="container mx-auto">
