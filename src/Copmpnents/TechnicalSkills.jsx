@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
+import { motion } from "framer-motion";
 
 const TechnicalSkills = () => {
- const skills = [
+  const skills = [
     "HTML5",
     "JAVASCRIPT",
     "CSS",
@@ -18,23 +19,28 @@ const TechnicalSkills = () => {
           Technical <span className="text-cyan-400">skills.</span>
         </h2>
         <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-          With proficiency and dedication, I seamlessly integrate creativity 
-          and functionality using cutting-edge technologies to deliver exceptional results.
+          With proficiency and dedication, I seamlessly integrate creativity and
+          functionality using cutting-edge technologies to deliver exceptional
+          results.
         </p>
-        
+
         <div className="flex flex-wrap justify-center gap-4">
           {skills.map((skill, index) => (
-            <div 
+            <motion.div
+              whileHover={{ scale: 1.05, backgroundColor: "#22d3ee" }} // تكبير وتغيير لون الخلفية للأزرق الفاتح
+              whileTap={{ scale: 0.95 }}
               key={index}
-              className="px-8 py-4 bg-[#1a1a1a] border border-gray-800 rounded-full hover:border-cyan-400 transition-colors"
+              className="px-8 py-4 bg-[#1a1a1a] border border-gray-800 rounded-full "
             >
-              <span className="text-sm tracking-wider">{skill}</span>
-            </div>
+              <span className="text-sm tracking-wider">
+                {skill}
+              </span>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};
 
-export default TechnicalSkills
+export default TechnicalSkills;

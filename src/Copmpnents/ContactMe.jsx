@@ -2,6 +2,7 @@ import React from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 import emailjs from "emailjs-com";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const ContactMe = () => {
   const [status, setStatus] = useState(null);
@@ -14,7 +15,7 @@ const ContactMe = () => {
         "service_wvgovjb",
         "template_h7bynhf",
         e.target,
-        "SKD2KnJ9hVDHmOkrC"
+        "SKD2KnJ9hVDHmOkrC",
       )
       .then(() => {
         setLoading(false);
@@ -142,14 +143,16 @@ const ContactMe = () => {
                 ></textarea>
               </div>
 
-              <button
+              <motion.button
+                whileHover={{ scale: 1.05, backgroundColor: "#ffffff" }} // تكبير وتغيير لون الخلفية للأزرق الفاتح
+                whileTap={{ scale: 0.95 }}
                 type="submit"
                 disabled={loading}
                 className="w-full bg-cyan-400 text-black py-3 rounded
-                   hover:bg-cyan-300 transition disabled:opacity-60"
+                    disabled:opacity-60"
               >
                 {loading ? "Sending..." : "Send message"}
-              </button>
+              </motion.button>
 
               {status === "success" && (
                 <div

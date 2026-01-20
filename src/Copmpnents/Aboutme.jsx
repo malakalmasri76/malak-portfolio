@@ -2,10 +2,18 @@ import React from "react";
 import { Download } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import aboutme from "../assets/aboutme.webp";
+import { motion } from "framer-motion";
 
 const Aboutme = () => {
   return (
-    <section id="about" className="py-20 px-6">
+    <motion.section
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      id="about"
+      className="py-20 px-6"
+    >
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-4xl text-center mb-16">
           About <span className="text-cyan-400">me.</span>
@@ -55,18 +63,20 @@ const Aboutme = () => {
               user experience and bring ideas to life through code.
             </p>
 
-            <a
+            <motion.a
+              whileHover={{ scale: 1.05, backgroundColor: "#ffffff" }} // تكبير وتغيير لون الخلفية للأزرق الفاتح
+              whileTap={{ scale: 0.95 }}
               href="/Malak_Almasri_CV.pdf"
               download
-              className="bg-cyan-400 text-black px-6 py-3 rounded hover:bg-cyan-300 transition-colors flex items-center gap-2 w-fit"
+              className="bg-cyan-400 text-black px-6 py-3 rounded  flex items-center gap-2 w-fit"
             >
               <Download className="w-5 h-5" />
               Download CV
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

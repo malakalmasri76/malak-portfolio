@@ -1,5 +1,6 @@
 import React from "react";
 import { Github, Instagram, Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
@@ -57,24 +58,30 @@ const Footer = () => {
           <div>
             <h4 className="mb-4">Follow Me</h4>
             <div className="flex gap-3">
-              <a
-                href="https://github.com/malakalmasri76"
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-cyan-400 hover:text-black transition-colors"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.instagram.com/m.l.k_13/"
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-cyan-400 hover:text-black transition-colors"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/malak-almasri/"
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-cyan-400 hover:text-black transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
+              <motion.a
+            whileHover={{ scale: 1.05, backgroundColor: "#22d3ee" }} // تكبير وتغيير لون الخلفية للأزرق الفاتح
+            whileTap={{ scale: 0.95 }}
+            href="https://github.com/malakalmasri76"
+            className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center "
+          >
+            <Github className="w-5 h-5" />
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.05, backgroundColor: "#22d3ee" }} // تكبير وتغيير لون الخلفية للأزرق الفاتح
+            whileTap={{ scale: 0.95 }}
+            href="https://www.linkedin.com/in/malak-almasri/"
+            className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center "
+          >
+            <Linkedin className="w-5 h-5" />
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.05, backgroundColor: "#22d3ee" }} // تكبير وتغيير لون الخلفية للأزرق الفاتح
+            whileTap={{ scale: 0.95 }}
+            href="https://www.instagram.com/m.l.k_13/"
+            className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center "
+          >
+            <Instagram className="w-5 h-5" />
+          </motion.a>
             </div>
           </div>
         </div>
