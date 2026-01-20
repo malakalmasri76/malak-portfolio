@@ -19,17 +19,18 @@ const FeaturedProjects = () => {
         "A responsive travel planning web application built with React. Features interactive UI components and dynamic data rendering.",
       image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
       github: "https://github.com/malakalmasri76/Trippy-App",
-      demo: "https://trippy-app-malak.vercel.app/", // تأكدي من الروابط الصحيحة
+      demo: "https://trippy-website-ten.vercel.app/", 
     },
     {
-      title: "Melody Shop",
-      category: "React.js E-commerce UI",
-      description:
-        "A modern e-commerce shop interface developed using React. Showcases component-based architecture and interactive UI design.",
-      image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800",
-      github: "https://github.com/malakalmasri76/Melody-shop",
-      demo: "https://melody-shop-demo.vercel.app/", 
-    },
+  title: "Personal Portfolio",
+  category: "React.js Portfolio Website",
+  description:
+    "A personal portfolio website built with React to showcase projects, skills, and contact information with a clean and modern design.",
+  image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
+  github: "https://github.com/malakalmasri76/portfolio",
+  demo: "https://portfolio-tau-eight-34.vercel.app/",
+},
+
     {
       title: "Weather App",
       category: "React.js Weather Application",
@@ -37,7 +38,7 @@ const FeaturedProjects = () => {
         "A weather forecast application built with React that fetches real-time weather data with a clean interface.",
       image: "https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?w=800",
       github: "https://github.com/malakalmasri76/Weather-App",
-      demo: "https://weather-app-malak.vercel.app/",
+      demo: "https://weather-app-kappa-five-46.vercel.app/",
     },
   ];
   return (
