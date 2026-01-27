@@ -1,81 +1,25 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper/modules"; // أضفنا Navigation هنا
+import { Pagination, Navigation } from "swiper/modules"; // أضفنا Navigation هنا
+import { client, urlFor } from "../sanityClient";
+import { useEffect, useState } from "react";
 
 // استيراد ستايلات Swiper
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation"; // أضفنا ستايل التنقل
 const Motion = motion;
+
 const FeaturedProjects = () => {
-  const projects = [
-    {
-      title: "Product Page",
-      category: "HTML5 • CSS3 • JavaScript (Vanilla)",
-      description:
-        "A simple and responsive product page built with React. Displays product details with a clean UI and reusable components.",
-      image: "/assets/product.png",
-      github: "https://github.com/malakalmasri76/Product-page",
-      demo: "https://product-page-rouge.vercel.app/",
-    },
+  const [projects, setProjects] = useState([]);
 
-    {
-      title: "Trippy App",
-      category: "React.js • Grid • Responsive Design",
-      description:
-        "A responsive travel planning web application built with React. Features interactive UI components and dynamic data rendering.",
-      image: "/assets/trripy.png",
-      github: "https://github.com/malakalmasri76/Trippy-App",
-      demo: "https://trippy-website-ten.vercel.app/",
-    },
-    {
-      title: "Personal Portfolio",
-      category: "React • HTML • Tailwind CSS • TypeScript",
-      description:
-        "A personal portfolio website built with React to showcase projects, skills, and contact information with a clean and modern design.",
-      image: "/assets/malak.png",
-      github: "https://github.com/malakalmasri76/portfolio",
-      demo: "https://portfolio-tau-eight-34.vercel.app/",
-    },
+useEffect(() => {
+  client.fetch(`*[_type == "project"]`)
+    .then((data) => setProjects(data))
+    .catch(console.error);
+}, []);
 
-    {
-      title: "Weather App",
-      category: "React.js • Axios • Flexbox",
-      description:
-        "A weather forecast application built with React that fetches real-time weather data and displays current conditions in a clean, user-friendly interface.",
-      image: "/assets/weather.png",
-      github: "https://github.com/malakalmasri76/Weather-App",
-      demo: "https://weather-app-kappa-five-46.vercel.app/",
-    },
-    {
-      title: "Portfolio Website",
-      category: "React • HTML • Tailwind CSS • TypeScript",
-      description:
-        "Personal portfolio website showcasing my front-end projects and skills.Built with a clean layout and responsive design.",
-      image: "/assets/portfolio.png",
-      github: "https://github.com/malakalmasri76/portfolio",
-      demo: "https://portfolio-tau-eight-34.vercel.app/",
-    },
-    {
-      title: "Pokémon Catching Game",
-      category: "HTML • CSS • JavaScript",
-      description:
-        "A fun, interactive web-based game inspired by Pokémon. This project demonstrates DOM manipulation, event handling, and game logic implementation.",
-      image: "/assets/pokmon.png",
-      github: "https://github.com/malakalmasri76/Pok-mon-Game",
-      demo: "https://pok-mon-game-chi.vercel.app/",
-    },
-    {
-      title: "Movie App",
-      category: "HTML • CSS • JavaScript",
-      description:
-        "A responsive movie explorer built with React and Vite, using The Movie Database (TMDB) API.",
-      image: "../assets/movie.png",
-      github: "https://github.com/malakalmasri76/Movie-App",
-      demo: "https://movie-app-kappa-dun.vercel.app/",
-    },
-  ];
   return (
     <Motion.section
       initial={{ opacity: 0, y: 50 }}
@@ -122,7 +66,7 @@ const FeaturedProjects = () => {
                 >
                   <div className="aspect-video bg-gray-800 overflow-hidden relative">
                     <img
-                      src={project.image}
+                      src={urlFor(project.image).url()}
                       alt={project.title}
                       className="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500"
                     />
@@ -170,7 +114,7 @@ const FeaturedProjects = () => {
         </div>
       </div>
 
-      <style jsx global>{`
+      <style>{`
       
         /* جعل الحاوية تسمح برؤية الأسهم خارجها */
         .swiper {
