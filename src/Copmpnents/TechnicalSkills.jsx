@@ -1,5 +1,6 @@
 import React from "react";
-import { Motion } from "framer-motion";
+import { motion } from "motion/react";
+const Motion = motion;
 
 const TechnicalSkills = () => {
   const skills = [
@@ -26,7 +27,7 @@ const TechnicalSkills = () => {
 
         <div className="flex flex-wrap justify-center gap-4">
           {skills.map((skill, index) => (
-            <motion.div
+            <Motion.div
               whileHover={{ scale: 1.05, backgroundColor: "#22d3ee" }} // تكبير وتغيير لون الخلفية للأزرق الفاتح
               whileTap={{ scale: 0.95 }}
               key={index}
@@ -35,7 +36,7 @@ const TechnicalSkills = () => {
               <span className="text-sm tracking-wider">
                 {skill}
               </span>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>

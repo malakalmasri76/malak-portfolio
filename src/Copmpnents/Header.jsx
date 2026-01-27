@@ -1,10 +1,11 @@
 import React from "react";
-import logo from "../assets/logo.png";
-import { Motion } from "framer-motion";
+import logo from "/public/assets/logo.png";
+import { motion } from "motion/react";
+const Motion = motion;
 
 const Header = () => {
   return (
-    <motion.header
+    <Motion.header
       initial={{ y: -100, opacity: 0 }} // يبدأ من خارج الشاشة (فوق) ويكون شفافاً
       animate={{ y: 0, opacity: 1 }} // يتحرك لمكانه الطبيعي ويظهر
       transition={{ duration: 0.8, ease: "easeOut" }} // سرعة ونوع الحركة
@@ -13,56 +14,56 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2 text-xl">
           <img src={logo} alt="Logo" className="w-8 h-8" />
-          <motion.a
+          <Motion.a
             href="#"
             whileHover={{ scale: 1.05, color: "#22d3ee" }} // تكبير بسيط عند المرور
             whileTap={{ scale: 0.95 }} // تأثير ضغطة عند النقر
             className="inline-block" // ضروري لتطبيق الحركة بشكل صحيح
           >
             <h1 className="text-2xl font-bold cursor-pointer">Malak Dev.</h1>
-          </motion.a>
+          </Motion.a>
         </div>
 
         <div className="hidden md:flex items-center gap-8">
-          <motion.a
+          <Motion.a
             whileHover={{ scale: 1.1, color: "#22d3ee" }} // تكبير وتغيير اللون للأزرق
             whileTap={{ scale: 0.9 }}
             href="#home"
           >
             Home
-          </motion.a>
-          <motion.a
+          </Motion.a>
+          <Motion.a
             whileHover={{ scale: 1.1, color: "#22d3ee" }} // تكبير وتغيير اللون للأزرق
             whileTap={{ scale: 0.9 }}
             href="#projects"
           >
             Related projects
-          </motion.a>
-          <motion.a
+          </Motion.a>
+          <Motion.a
             whileHover={{ scale: 1.1, color: "#22d3ee" }} // تكبير وتغيير اللون للأزرق
             whileTap={{ scale: 0.9 }}
             href="#about"
           >
             About me
-          </motion.a>
-          <motion.a
+          </Motion.a>
+          <Motion.a
             whileHover={{ scale: 1.1, color: "#22d3ee" }} // تكبير وتغيير اللون للأزرق
             whileTap={{ scale: 0.9 }}
             href="#contact"
           >
             Contact
-          </motion.a>
+          </Motion.a>
         </div>
-        <motion.a
+        <Motion.a
           whileHover={{ scale: 1.05, backgroundColor: "#ffffff" }} // تكبير وتغيير لون الخلفية للأزرق الفاتح
           whileTap={{ scale: 0.95 }}
           href="#contact"
           className="bg-cyan-400 text-black px-6 py-2 rounded"
         >
           Work With Me
-        </motion.a>
+        </Motion.a>
       </nav>
-    </motion.header>
+    </Motion.header>
   );
 };
 

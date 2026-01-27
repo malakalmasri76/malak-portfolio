@@ -1,6 +1,7 @@
 import React from 'react';
 import { Code, Layout, Zap } from 'lucide-react';
-import { Motion } from 'framer-motion'; // 1. استيراد motion
+import { motion } from "motion/react";
+const Motion = motion;
 
 const WhatIdo = () => {
   const services = [
@@ -45,17 +46,17 @@ const WhatIdo = () => {
     <section className="py-20 px-6 overflow-hidden">
       <div className="container mx-auto">
         {/* تحريك العنوان */}
-        <motion.h2 
+        <Motion.h2 
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-4xl text-center mb-16"
         >
           What I <span className="text-cyan-400">do.</span>
-        </motion.h2>
+        </Motion.h2>
         
         {/* تحريك الحاوية (Grid) */}
-        <motion.div 
+        <Motion.div 
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -65,7 +66,7 @@ const WhatIdo = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <motion.div 
+              <Motion.div 
                 key={index}
                 variants={itemVariants}
                 whileHover={{ y: -10, transition: { duration: 0.2 } }} // حركة عند تمرير الماوس
@@ -80,10 +81,10 @@ const WhatIdo = () => {
                 <p className={index === 0 ? 'text-black/80' : 'text-gray-400'}>
                   {service.description}
                 </p>
-              </motion.div>
+              </Motion.div>
             );
           })}
-        </motion.div>
+        </Motion.div>
       </div>
     </section>
   );

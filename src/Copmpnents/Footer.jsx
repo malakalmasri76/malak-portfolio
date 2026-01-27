@@ -1,6 +1,7 @@
 import React from "react";
 import { Github, Instagram, Linkedin } from "lucide-react";
-import { Motion } from "framer-motion";
+import { motion } from "motion/react";
+const Motion = motion;
 
 const Footer = () => {
   return (
@@ -58,30 +59,30 @@ const Footer = () => {
           <div>
             <h4 className="mb-4">Follow Me</h4>
             <div className="flex gap-3">
-              <motion.a
+              <Motion.a
             whileHover={{ scale: 1.05, backgroundColor: "#22d3ee" }} // تكبير وتغيير لون الخلفية للأزرق الفاتح
             whileTap={{ scale: 0.95 }}
             href="https://github.com/malakalmasri76"
             className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center "
           >
             <Github className="w-5 h-5" />
-          </motion.a>
-          <motion.a
+          </Motion.a>
+          <Motion.a
             whileHover={{ scale: 1.05, backgroundColor: "#22d3ee" }} // تكبير وتغيير لون الخلفية للأزرق الفاتح
             whileTap={{ scale: 0.95 }}
             href="https://www.linkedin.com/in/malak-almasri/"
             className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center "
           >
             <Linkedin className="w-5 h-5" />
-          </motion.a>
-          <motion.a
+          </Motion.a>
+          <Motion.a
             whileHover={{ scale: 1.05, backgroundColor: "#22d3ee" }} // تكبير وتغيير لون الخلفية للأزرق الفاتح
             whileTap={{ scale: 0.95 }}
             href="https://www.instagram.com/m.l.k_13/"
             className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center "
           >
             <Instagram className="w-5 h-5" />
-          </motion.a>
+          </Motion.a>
             </div>
           </div>
         </div>

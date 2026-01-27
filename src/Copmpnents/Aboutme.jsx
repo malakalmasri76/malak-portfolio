@@ -1,12 +1,10 @@
 import React from "react";
 import { Download } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-import aboutme from "../assets/aboutme.webp";
-import { Motion } from "framer-motion";
-
+import { motion } from "motion/react";
+const Motion = motion;
 const Aboutme = () => {
   return (
-    <motion.section
+    <Motion.section
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
@@ -22,8 +20,8 @@ const Aboutme = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <div className="w-80 h-80 mx-auto rounded-full overflow-hidden border-4 border-cyan-400">
-              <ImageWithFallback
-                src={aboutme}
+              <img
+                src="/assets/aboutme.webp"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -76,7 +74,7 @@ const Aboutme = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </Motion.section>
   );
 };
 

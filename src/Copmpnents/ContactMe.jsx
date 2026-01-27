@@ -2,7 +2,8 @@ import React from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 import emailjs from "emailjs-com";
 import { useState } from "react";
-import { Motion } from "framer-motion";
+import { motion } from "motion/react";
+const Motion = motion;
 
 const ContactMe = () => {
   const [status, setStatus] = useState(null);
@@ -143,7 +144,7 @@ const ContactMe = () => {
                 ></textarea>
               </div>
 
-              <motion.button
+              <Motion.button
                 whileHover={{ scale: 1.05, backgroundColor: "#ffffff" }} // تكبير وتغيير لون الخلفية للأزرق الفاتح
                 whileTap={{ scale: 0.95 }}
                 type="submit"
@@ -152,7 +153,7 @@ const ContactMe = () => {
                     disabled:opacity-60"
               >
                 {loading ? "Sending..." : "Send message"}
-              </motion.button>
+              </Motion.button>
 
               {status === "success" && (
                 <div
