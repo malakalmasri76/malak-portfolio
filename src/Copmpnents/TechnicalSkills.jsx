@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { Motion } from "framer-motion";
 
 const TechnicalSkills = () => {
   const skills = [

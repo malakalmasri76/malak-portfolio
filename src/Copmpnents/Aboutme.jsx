@@ -2,7 +2,7 @@ import React from "react";
 import { Download } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import aboutme from "../assets/aboutme.webp";
-import { motion } from "framer-motion";
+import { Motion } from "framer-motion";
 
 const Aboutme = () => {
   return (

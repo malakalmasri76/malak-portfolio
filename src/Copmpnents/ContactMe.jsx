@@ -2,7 +2,7 @@ import React from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 import emailjs from "emailjs-com";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { Motion } from "framer-motion";
 
 const ContactMe = () => {
   const [status, setStatus] = useState(null);

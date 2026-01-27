@@ -1,6 +1,6 @@
 import React from 'react';
 import { Code, Layout, Zap } from 'lucide-react';
-import { motion } from 'framer-motion'; // 1. استيراد motion
+import { Motion } from 'framer-motion'; // 1. استيراد motion
 
 const WhatIdo = () => {
   const services = [

@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/logo.png";
-import { motion } from "framer-motion";
+import { Motion } from "framer-motion";
 
 const Header = () => {
   return (

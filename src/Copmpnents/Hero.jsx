@@ -1,7 +1,7 @@
 import React from "react";
 import { Github, Mail, Linkedin, Instagram } from "lucide-react";
 import background from "../assets/background.jpg";
-import { motion } from "framer-motion";
+import { Motion } from "framer-motion";
 
 const Hero = () => {
   return (
