@@ -3,7 +3,7 @@
 Welcome to my professional portfolio! This project showcases my journey as a Front-End Developer, featuring my skills, projects, and the technical stack I use to build modern web applications.
 
 ## 🌐 Live Demo
-You can view the live website here: [Link to your hosted site, e.g., Netlify or Vercel]
+You can view the live website here: https://malak-portfolio-psi.vercel.app/
 
 ## ✨ Features
 - **Responsive Design:** Fully optimized for all screen sizes (Mobile, Tablet, Desktop).
@@ -20,7 +20,5 @@ You can view the live website here: [Link to your hosted site, e.g., Netlify or 
 
 ## 📸 Screenshot
  <img width="1583" height="719" alt="malak" src="https://github.com/user-attachments/assets/fb8627b5-88ee-4a93-9a08-073b631b50ce" />
-
-
 ## view link:
 https://malak-portfolio-psi.vercel.app/
